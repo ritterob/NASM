@@ -1,5 +1,7 @@
 > The lovers moved to flee from heaven's tears
 
+## Intro, Part 2, in which we learn about addressing memory.
+
 Last time I said, “Before we begin in earnest, two things.” Here comes thing number two.
 
 <p style="background-color: black;color:yellow;border: 1px solid yellow;padding:0.7em 1em;text-align:center;">
@@ -8,7 +10,7 @@ Warning: this post contains frequent references to explicit hex, and may be inap
 
 Second, a word about how assembler works. You are no doubt aware that your computer has long-term storage (disks) and short-term storage (random access memory, or RAM). If we use an office allegory to describe a computer, we might say that the disks are like the filing cabinets in the back room: they can hold lots and lots of stuff, and are generally pretty well organized, but inconvenient. Constantly going to them to fetch new work or to put something away would be a chore. So, we tend to use them only when we need to grab something we plan to use soon or to put something away when we won't be using it for a good long while. RAM is like the in/out trays on my desk: I can stack all kinds of stuff there (though much less than I can put in the filing cabinets) and my work is quickly and easily accessible. The CPU is like my desktop, where all the work actually happens. To do some work, I have to take it from the trays and move it to the desktop, and to clear the desk for some other task I need to move what's on the desktop back to the trays. So, where in the CPU do we store this really temporary stuff while working on it?
 
-## Registers
+### Registers
 
 CPUs have built-in memory storage spaces called registers. In the intel x86 architecture, 16-bit general purpose registers go by the names AX, BX, CX and DX. Each 16-bit register can be broken into two parts, a high-order byte and a low-order byte. For register AX, these would be called AH and AL, respectively. The specific meanings of high- and low-order aren't too important right now, and the topic delves deep into ancient religious wars of CPU design. But suffice it to say that putting the 16-bit word `c725h` into register AX will load `c7h` into **AH** and `25h` into **AL**.
 
@@ -22,7 +24,7 @@ So writing an assembly language program is like shuffling paperwork around. You 
 3                  int     21h
 ```
 
-## Segments
+### Segments
 
 Another thing you must know is how DOS accesses memory. To mov (copy) data to or from RAM, you need an address. Since DOS uses 16-bit registers, the largest address it can work with is 16 bits long, so dos can address up to 65,536 (64k) bytes of RAM. That's it. A long time ago, 64k was a lot. Remember all the great programs we ran on the Atari 800 XL or Commodore 64? But as consumers demanded more from their applications, 64k became a barrier. DOS handles this by viewing memory as a series of _segments_, each 64kb in size. A program can contain many segments of code and data, so long as none of them exceeds 64kb.
 
@@ -34,7 +36,7 @@ To address memory, then, we require two registers: a special segment register 
 6                  mov     ds, ax          ; data segment
 ```
 
-## Stack
+### Stack
 
 Finally, there is the stack. This is a handy little place in memory to put things temporarily, such as when you want to pass data from one procedure to another. We push data onto the stack to store it, and we pop data off of the stack to retrieve it. The stack is like that little cart with the clean plates at the head of a buffet line. The most recently cleaned plates are warm, damp and on the top of the stack, and the ones that have been there awhile and are much drier are at the bottom. When you take a plate off the top, you're taking the one that was most recently placed on the stack.
 
