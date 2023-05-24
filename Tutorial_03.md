@@ -1,6 +1,6 @@
 >But thunder interrupted all their fears
 
-## Writing your first program, HELLO.EXE
+## Writing your first program, HELLO.EXE.
 
 Now that you're ready to begin writing, we'll dig right in. Here is our first heavily annotated program, `hello.exe`.
 
