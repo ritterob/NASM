@@ -131,4 +131,4 @@ warplink hello.obj
 ```
 This creates the file **hello.exe**. Notice that I included these instructions in the comments at the top of the source file. This is useful if you come back to the program at a later time and want to make changes. Now run your program and bask in the warmth of the knowledge that you have made this CPU do your explicit bidding. A little bit more of this, and you'll be ready for live minions.
 
-Next time, we'll pass command-line parameters into our program, and we'll shake things up a bit with the DOS com file format.
+Next time, we'll pass command-line parameters into our program, and we'll shake things up a bit with the DOS COM file format.
