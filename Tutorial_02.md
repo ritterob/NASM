@@ -16,7 +16,7 @@ In modern, 32-bit CPUs, each 16-bit register is only half of one of the 32-bit r
 
 So writing an assembly language program is like shuffling paperwork around. You copy data into a register, you tell the CPU to process it, then you do something (or nothing, if you wish) with the result. Here is a simple set of instructions that you'll see frequently in assembler. We'll talk about what it does next time.
 
-```
+```nasm
 1  ; These instructions are commonly found in DOS programs.
 2                  mov     ax, 4c00h
 3                  int     21h
@@ -28,7 +28,7 @@ Another thing you must know is how DOS accesses memory. To mov (copy) data to 
 
 To address memory, then, we require two registers: a special segment register for the segment address and a normal general purpose register for the offset within that segment. If the DS register, which points to a data segment, contains `24a0h` and we `mov 0fh` into register DX, then **DS:DX** refers to the 16th byte of that segment, written as `24a0:000fh`. If we later load DS with `4110h`, we'll find that **DS:DX** now points to `4110:000fh`. It's not too complicated, but it's up to the programmer to remember which segment he's using at any point in time. Fortunately, you need not know the exact addresses of your segments (DOS actually determines that at runtime, so there is no way you _could_ know as you're writing your source). In assembler, we use labels, friendly names, to refer to addresses. So, you may see code like the following to initialize the data segment register:
 
-```
+```nasm
 4  ; Load the DS register with the address of the data segment.
 5                  mov     ax, data        ; “data” is the address of our
 6                  mov     ds, ax          ; data segment
