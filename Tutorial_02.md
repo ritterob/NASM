@@ -4,9 +4,7 @@
 
 Last time I said, “Before we begin in earnest, two things.” Here comes thing number two.
 
-<p style="background-color: black;color:yellow;border: 1px solid yellow;padding:0.7em 1em;text-align:center;">
-Warning: this post contains frequent references to explicit hex, and may be inappropriate for readers under the age of
-11h!</p>
+_Warning: this post contains frequent references to explicit hex, and may be inappropriate for readers under the age of 11h!_
 
 Second, a word about how assembler works. You are no doubt aware that your computer has long-term storage (disks) and short-term storage (random access memory, or RAM). If we use an office allegory to describe a computer, we might say that the disks are like the filing cabinets in the back room: they can hold lots and lots of stuff, and are generally pretty well organized, but inconvenient. Constantly going to them to fetch new work or to put something away would be a chore. So, we tend to use them only when we need to grab something we plan to use soon or to put something away when we won't be using it for a good long while. RAM is like the in/out trays on my desk: I can stack all kinds of stuff there (though much less than I can put in the filing cabinets) and my work is quickly and easily accessible. The CPU is like my desktop, where all the work actually happens. To do some work, I have to take it from the trays and move it to the desktop, and to clear the desk for some other task I need to move what's on the desktop back to the trays. So, where in the CPU do we store this really temporary stuff while working on it?
 
