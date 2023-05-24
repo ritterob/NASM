@@ -1,6 +1,6 @@
 > Assembled 'neath a dark, foreboding sky
 
-## Intro, Part 1
+## Intro, Part 1, in which we assemble our tools.
 
 As promised, a little DOS and Linux assembly language tutorial in several verses for your consideration. Mostly DOS
 though, for that is where my dark past lies: but a little Linux is good for the soul (and the understanding.) Before
