@@ -45,7 +45,7 @@ set PATH=%PATH%;C:\NASM;C:\WARPLINK;C:\EDITV;C:\PKZIP;C:\BIN
 ```
 
 Once you've done this, you can start DOSBox (which should drop you into your C drive) and use the DOS command `md` to
-create the directories **NASM**, **WARPLINK**, **EDITV**, **PKZIP**, **BIN**, and SOURCE. Run the command `dir` and 
+create the directories **NASM**, **WARPLINK**, **EDITV**, **PKZIP**, **BIN**, and **SOURCE**. Run the command `dir` and 
 ensure that eight directories exist (this number includes the `.` and the `..` directories.)
 
 Copy **pk250dos.exe** to the **DOS/PKZIP** directory and run the executable inside DOSBox. You will find that when you 
