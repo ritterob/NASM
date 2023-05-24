@@ -27,7 +27,7 @@ concepts are the same and linguistic differences are often minor, so it's nothin
 Some of the programs we write will require a linker. I'm using the public domain **warplink** for this, which can be
 found in this repository's resources directory as **wl27.zip**. And finally, since most of these utilities are packaged
 as .zip files, we'll snag the darling of DOS [BBSs](https://en.wikipedia.org/wiki/Bulletin_board_system) the world
-over, [PKZip] (the second-finest piece of DOS shareware ever written.)
+over, [PKZip](https://oldos.org/downloads/msdos/) (the second-finest piece of DOS shareware ever written.)
 
 Install DOSBox and create a folder in your home directory to keep your work in. I called mine DOS. Edit the DOSBox
 configuration file by adding a few lines after the `[autoexec]` section at the very end. Mine automatically mounts my
@@ -61,7 +61,7 @@ them like this example:
 C:\EDITV>pkunzip editv41u.zip
 ```
 
-When all this is done, close and reopen DOSBox (you can type `exit` at the dos prompt to close) and verify that you can
+When all this is done, close and reopen DOSBox (you can type `exit` at the DOS prompt to close) and verify that you can
 run all these programs from the root directory of drive C by just typing their names: `editv`, `nasm`, and `warplink`. 
 If you run into any DOSBox trouble, refer to 
 [this little article.](https://devtidbits.com/2008/02/17/dosbox-beginners-newbie-and-first-timers-guide/) If 
